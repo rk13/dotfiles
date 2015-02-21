@@ -1,3 +1,22 @@
+" This line should not be removed as it ensures that various options are
+" properly set to work with the Vim-related packages available in Debian.
+runtime! debian.vim
+
+" Vim5 and later versions support syntax highlighting. 
+" Uncommenting the next line enables syntax highlighting by default.
+if has("syntax")
+  syntax on
+endif
+
+" If using a dark background within the editing area 
+" and syntax highlighting turn on this option as well
+set background=dark
+
+" Poweline status bar
+set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+set laststatus=2
+set t_Co=256
+
 " Wrap too long lines
 set wrap
 
@@ -85,3 +104,5 @@ autocmd BufReadPost *
   \ if line("'\"") > 0 && line("'\"") <= line("$") |
   \   exe "normal g`\"" |
   \ endif
+
+
