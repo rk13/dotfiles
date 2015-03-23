@@ -121,3 +121,7 @@ export SENCHA_CMD_3_0_0="/home/rk13/nobackup/soft/sencha2.3/cmd/Sencha/Cmd/5.0.0
 [[ -s "/home/rk13/.gvm/bin/gvm-init.sh" ]] && source "/home/rk13/.gvm/bin/gvm-init.sh"
 
 export PATH=/home/rk13/nobackup/soft/sencha2.3/cmd/Sencha/Cmd/5.0.0.160:$PATH
+
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
+
