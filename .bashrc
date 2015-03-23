@@ -102,7 +102,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 ### Additional configuratio  files
-for file in ~/.{exports,functions}; do
+for file in ~/.{exports,functions,alias-*}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
