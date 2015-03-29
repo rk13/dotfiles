@@ -108,18 +108,6 @@ unset file
 # init z   https://github.com/rupa/z
 . ~/git/3dparty-tools/z/z.sh
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-export PATH=/home/rk13/nobackup/soft/sencha2.3/cmd/Sencha/Cmd/4.0.0.203:$PATH
-
-export SENCHA_CMD_3_0_0="/home/rk13/nobackup/soft/sencha2.3/cmd/Sencha/Cmd/5.0.0.160"
-
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/home/rk13/.gvm/bin/gvm-init.sh" ]] && source "/home/rk13/.gvm/bin/gvm-init.sh"
-
-export PATH=/home/rk13/nobackup/soft/sencha2.3/cmd/Sencha/Cmd/5.0.0.160:$PATH
-
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
