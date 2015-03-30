@@ -1,0 +1,42 @@
+# detach on hangup
+autodetach on
+ 
+# don't display the copyright page
+ startup_message off
+  
+# set scrollback to 200 lines, default 100
+defscrollback 2000
+   
+# set silencewait to 15 seconds, default 30
+silencewait 15
+    
+# new shells should be started as login-shells
+shell -$SHELL
+     
+# make a fancy statusline
+caption always " "
+# clear line before hardstatus
+hardstatus alwayslastline "%{= kb}[ %{B}%H:$USER %{b}][%=%{w}%?%-Lw%?%{b}(%{W}%n*%f %t%?(%u)%?%{b})%{w}%?%+Lw%?%?%=%{b}][%{B} %l %{B}%{W}%d.%0m %{b}]" 
+
+# make higlighting bold, black on blue background
+sorendition +b bk
+
+# some bindings
+bind k
+bind ^k
+bind .
+bind ^\
+bind \\
+bind ^h
+bind h
+ 
+bind 'w' windowlist -b
+bind 'W' windows
+bind 'K' kill
+bind 'I' login on
+bind 'O' login off
+bind '}' history
+ 
+bind = resize =
+bind + resize +3
+bind - resize -3
