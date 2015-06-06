@@ -105,9 +105,6 @@ for file in ~/.{exports,functions,alias-*}; do
 done
 unset file
 
-# init z   https://github.com/rupa/z
-. ~/git/3dparty-tools/z/z.sh
-
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
