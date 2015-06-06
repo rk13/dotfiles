@@ -1,7 +1,7 @@
 export JAVA_HOME=/usr/lib/jvm/jdk1.8.0
 #export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386/
 export DERBY_HOME=$JAVA_HOME/db
-export MAVEN_HOME=/home/rk13/soft/apache-maven
+export MAVEN_HOME=$HOME/soft/apache-maven
 export ORACLE_HOME=/usr/lib/oracle/xe/app/oracle/product/10.2.0/server/
 export ORACLE_SID=XE
 export PATH=$PATH:$MAVEN_HOME/bin:$ORACLE_HOME/bin
@@ -9,48 +9,46 @@ export PATH=$PATH:$MAVEN_HOME/bin:$ORACLE_HOME/bin
 export TNS_ADMIN=$ORACLE_HOME/network/admin/tnsnames.ora
 alias sqlplus='/usr/bin/rlwrap -m ${ORACLE_HOME}/bin/sqlplus'
 
-export GRAILS_HOME="/home/rk13/soft/grails"
+export GRAILS_HOME="$HOME/soft/grails"
 export PATH=$PATH:$GRAILS_HOME/bin
 
-export REBEL_HOME="/home/rk13/soft/jrebel"
-export AS_HOME="/home/rk13/soft/glassfish3"
+export REBEL_HOME="$HOME/soft/jrebel"
+export AS_HOME="$HOME/soft/glassfish3"
 export PATH=$PATH:$AS_HOME/bin
 
-export SENCHA_SDK_TOOLS="/home/rk13/soft/sencha-sdk-tools"
+export SENCHA_SDK_TOOLS="$HOME/soft/sencha-sdk-tools"
 export PATH=$PATH:$SENCHA_SDK_TOOLS
 
-export MONGO_HOME="/home/rk13/soft/mongodb"
+export MONGO_HOME="$HOME/soft/mongodb"
 export PATH=$PATH:$MONGO_HOME/bin
 
-export METRO_HOME=/home/rk13/soft/metro
+export METRO_HOME=$HOME/soft/metro
 
-export ANDROID_SDK_HOME="/home/rk13/soft/android-sdk"
+export ANDROID_SDK_HOME="$HOME/soft/android-sdk"
 export PATH=$PATH:$ANDROID_SDK_HOME/tools:$ANDROID_SDK_HOME/platform-tools
 
-export ASPECTJ_SDK_HOME="/home/rk13/soft/aspectj"
+export ASPECTJ_SDK_HOME="$HOME/soft/aspectj"
 export PATH=$PATH:$ASPECTJ_SDK_HOME/bin
 
-export NODE_HOME="/home/rk13/soft/node-js/"
+export NODE_HOME="$HOME/soft/node-js/"
 export PATH=$PATH:$NODE_HOME/bin
 
-#export GROOVY_HOME="/home/rk13/soft/groovy/"
+#export GROOVY_HOME="$HOME/soft/groovy/"
 #export PATH=$PATH:$GROOVY_HOME/bin
 
 export EDITOR=vim
 
-export SBT_HOME="/home/rk13/soft/sbt"
+export SBT_HOME="$HOME/soft/sbt"
 export PATH=$PATH:$SBT_HOME/bin
 
-export GRADLE_HOME="/home/rk13/soft/gradle"
+export GRADLE_HOME="$HOME/soft/gradle"
 export PATH=$PATH:$GRADLE_HOME/bin
-
-export ANDROID_EMULATOR_FORCE_32BIT=true
 
 export HEROKU_PATH="/usr/local/heroku/"
 export PATH=$PATH:$HEROKU_PATH/bin
 
-export SENCHA_CMD_3_0_0="/home/rk13/nobackup/soft/sencha2.3/cmd/Sencha/Cmd/5.0.0.160"
+export SENCHA_CMD_3_0_0="$HOME/nobackup/soft/sencha2.3/cmd/Sencha/Cmd/5.0.0.160"
 export PATH=$PATH:$SENCHA_CMD_3_0_0
 
-[[ -s "/home/rk13/.gvm/bin/gvm-init.sh" ]] && source "/home/rk13/.gvm/bin/gvm-init.sh"
+[[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
 
