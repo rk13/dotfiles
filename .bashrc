@@ -108,3 +108,6 @@ unset file
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
