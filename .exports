@@ -2,9 +2,10 @@ export JAVA_HOME=/usr/lib/jvm/jdk1.8.0
 #export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386/
 export DERBY_HOME=$JAVA_HOME/db
 export MAVEN_HOME=$HOME/soft/apache-maven
+export ANT_HOME=$HOME/soft/apache-ant
 export ORACLE_HOME=/usr/lib/oracle/xe/app/oracle/product/10.2.0/server/
 export ORACLE_SID=XE
-export PATH=$PATH:$MAVEN_HOME/bin:$ORACLE_HOME/bin
+export PATH=$PATH:$MAVEN_HOME/bin:$ORACLE_HOME/bin:$ANT_HOME/bin
 
 export TNS_ADMIN=$ORACLE_HOME/network/admin/tnsnames.ora
 alias sqlplus='/usr/bin/rlwrap -m ${ORACLE_HOME}/bin/sqlplus'
