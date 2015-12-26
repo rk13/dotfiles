@@ -1,0 +1,13 @@
+[transcrypt]
+  version = 0.9.6
+  cipher = aes-256-cbc
+  password = ***
+[filter "crypt"]
+  clean = \"$(git rev-parse --show-toplevel)\"/.git/crypt/clean %f
+  smudge = \"$(git rev-parse --show-toplevel)\"/.git/crypt/smudge
+[diff "crypt"]
+  textconv = \"$(git rev-parse --show-toplevel)\"/.git/crypt/textconv
+[merge]
+  renormalize = true
+[alias]
+  ls-crypt = "!git ls-files | git check-attr --stdin filter | awk 'BEGIN { FS = \":\" }; /crypt$/{ print $1 }'
