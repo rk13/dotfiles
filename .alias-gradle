@@ -1,0 +1,12 @@
+
+#
+# Aliases for most often used gradle commands
+#
+
+gb()
+{
+  echo "gradle build"
+  gradle build
+}
+
+
