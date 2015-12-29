@@ -9,6 +9,10 @@ function f() {
     find . -name "$1"
 }
 
+# grep history shortcut
+function hrep() {
+   history | grep "$1"
+}
 
 # cd into whatever is the forefront Finder window.
 cdf() {  # short for cdfinder
@@ -18,9 +22,10 @@ cdf() {  # short for cdfinder
 
 # lets toss an image onto my server and pbcopy that bitch.
 function scpp() {
-    scp "$1" aurgasm@aurgasm.us:~/paulirish.com/i;
-    echo "http://paulirish.com/i/$1" | pbcopy;
-    echo "Copied to clipboard: http://paulirish.com/i/$1"
+    f=`date '+%Y-%m-%d'`-$1
+    scp "$1" rk13@mirage:~/i/$f
+    echo "http://kotov.lv/i/$f" | pbcopy
+    echo "Copied to clipboard: http://kotov.lv/i/$f"
 }
 
 # Start an HTTP server from a directory, optionally specifying the port
