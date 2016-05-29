@@ -51,7 +51,10 @@ export PATH=$PATH:$HEROKU_PATH/bin
 export SENCHA_CMD_3_0_0="$HOME/nobackup/soft/sencha2.3/cmd/Sencha/Cmd/5.0.0.160"
 export PATH=$PATH:$SENCHA_CMD_3_0_0
 
-[[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
+#export SCALA_HOME="$HOME/soft/scala-2/"
+#export PATH=$PATH:$SCALA_HOME/bin
+
+#[[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
 
 [[ -s "$HOME/.exports.local" ]] && source "$HOME/.exports.local"
 
