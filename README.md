@@ -8,6 +8,7 @@ Toss it into a file called `.exports.local`
 which you do not commit to this repo and just keep in your `~/`
 
 ####  Automatic config and shell variables
+* `.alias-docker` - Docker aliases
 * `.alias-maven` - Maven aliases (e.g. mvn-wicket)
 * `.alias-gradle` - Gradle aliases (e.g. gb, gradle build)
 * `.bashrc` - bash non-interactive session startup commands 
