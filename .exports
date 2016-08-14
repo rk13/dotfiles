@@ -42,9 +42,6 @@ export EDITOR=vim
 export SBT_HOME="$HOME/soft/sbt"
 export PATH=$PATH:$SBT_HOME/bin
 
-export GRADLE_HOME="$HOME/soft/gradle"
-export PATH=$PATH:$GRADLE_HOME/bin
-
 export HEROKU_PATH="/usr/local/heroku/"
 export PATH=$PATH:$HEROKU_PATH/bin
 
