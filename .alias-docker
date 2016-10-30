@@ -15,3 +15,21 @@ d4mac()
   unset ${!DOCKER_*} 
 }
 
+d-build()
+{
+  docker build -t $1 .
+}
+
+d-rm-exited-containers()
+{
+  echo "Removing exited docker containers.."
+  docker ps -a --no-trunc --filter "status=exited"
+  docker rm $(docker ps -qa --no-trunc --filter "status=exited")
+}
+
+d-rm-dangling-images()
+{
+  echo "Removing dangling docker images.."
+  docker images --filter "dangling=true" --no-trunc
+  docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+}
