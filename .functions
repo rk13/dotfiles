@@ -23,7 +23,7 @@ cdf() {  # short for cdfinder
 # lets toss an image onto my server and pbcopy that bitch.
 function scpp() {
     f=`date '+%Y-%m-%d'`-$1
-    scp "$1" rk13@mirage:~/i/$f
+    scp "$1" rk13@mirage.kotov.lv:~/i/$f
     echo "http://kotov.lv/i/$f" | pbcopy
     echo "Copied to clipboard: http://kotov.lv/i/$f"
 }
