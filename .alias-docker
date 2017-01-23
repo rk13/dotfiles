@@ -3,13 +3,19 @@
 # Aliases for most often used docker commands
 #
 
-dtoolbox()
+export DOCKER_CMD='docker'
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
+   export DOCKER_CMD='sudo docker'
+fi
+
+d-toolbox()
 {
   echo "switching to docker toolbox"
   eval "$(docker-machine env default)"
 }
 
-d4mac()
+d-mac()
 {
   echo "switching to docker for mac"
   unset ${!DOCKER_*} 
@@ -54,3 +60,9 @@ d-sh()
   echo "Trying to execute shell in container or image.."
   docker exec -it $1 sh || docker run -it $1 sh
 }
+
+d-log()
+{
+  $DOCKER_CMD logs $1 
+}
+
