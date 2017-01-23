@@ -24,6 +24,7 @@ d-rm-exited-containers()
 {
   echo "Removing exited docker containers.."
   docker ps -a --no-trunc --filter "status=exited"
+  read -n1 -r -p "Press any key to continue..." key
   docker rm $(docker ps -qa --no-trunc --filter "status=exited")
 }
 
@@ -31,5 +32,25 @@ d-rm-dangling-images()
 {
   echo "Removing dangling docker images.."
   docker images --filter "dangling=true" --no-trunc
+  read -n1 -r -p "Press any key to continue..." key
   docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+}
+
+d-rm-dangling-volumes()
+{
+  echo "Removing dangling docker volumes.."
+  docker volume ls -qf dangling=true
+  read -n1 -r -p "Press any key to continue..." key
+  docker volume rm $(docker volume ls -qf dangling=true)
+}
+
+d-fstrim()
+{
+  docker run --rm --privileged --pid=host justincormack/debian nsenter -t 1 -m -n fstrim /var
+}
+
+d-sh()
+{
+  echo "Trying to execute shell in container or image.."
+  docker exec -it $1 sh || docker run -it $1 sh
 }
