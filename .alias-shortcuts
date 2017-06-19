@@ -13,6 +13,7 @@ alias -- -="cd -"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias h="history"
+alias g=git
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -28,4 +29,10 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias lsd="ls -lF | grep --color=never '^d'"
+
+# mac aliases
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
