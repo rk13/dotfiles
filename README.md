@@ -11,6 +11,7 @@ which you do not commit to this repo and just keep in your `~/`
 * `.alias-docker` - Docker aliases
 * `.alias-maven` - Maven aliases (e.g. mvn-wicket)
 * `.alias-gradle` - Gradle aliases (e.g. gb, gradle build)
+* `.alias-shortcuts` - Aliases for easier navigation
 * `.bashrc` - bash non-interactive session startup commands 
 * `.exports` - shell variables variables
 * `.export.local` - local shell variables 
