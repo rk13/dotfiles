@@ -1,0 +1,24 @@
+
+#
+# Aliases for sqlplus 
+#
+
+sql+ib()
+{
+  sqlplus ib/ib@ibdx
+}
+
+sql+dgpd()
+{
+  sqlplus dgpd/dgpd@dgpd
+}
+
+sql+ibglb()
+{
+  sqlplus ibglb/ibglb@ibdx
+}
+
+sql+ibsys()
+{
+  sqlplus system/oracle@ibdx
+}

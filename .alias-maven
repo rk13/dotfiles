@@ -17,6 +17,11 @@ mvn-wicket()
                          -DartifactId=$1
 }
 
+mvn-dropwizard()
+{
+  mvn archetype:generate -DarchetypeGroupId=io.dropwizard.archetypes -DarchetypeArtifactId=java-simple -DarchetypeVersion=1.0.0
+}
+
 mvn-install()
 {
   mvn install:install-file -Dfile=$1 -DpomFile=$2

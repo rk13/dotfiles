@@ -14,6 +14,7 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias h="history"
 alias g=git
+alias d=docker
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
