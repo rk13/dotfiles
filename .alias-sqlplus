@@ -3,22 +3,81 @@
 # Aliases for sqlplus 
 #
 
-sql+ib()
+sql+patch()
 {
-  sqlplus ib/ib@ibdx
+  docker run --rm \
+    --network=docker_default \
+    -e "NLS_LANG=LATVIAN_LATVIA.UTF8" \
+    -v $PROJECT_HOME/digidb:/digidb \
+    -v $PROJECT_HOME/docker-library/tnsnames.ora.guest:/u01/app/oracle/product/11.2.0/xe/network/admin/tnsnames.ora \
+    --link ibdx-compose.local:ibdx.local \
+    -it \
+    --entrypoint=/bin/bash wnameless/oracle-xe-11g \
+    -ic 'cd /digidb/digi/install && bash'
+}
+
+sql+ib() 
+{
+  docker run --rm \
+    --network=docker_default \
+    -e "NLS_LANG=LATVIAN_LATVIA.UTF8" \
+    -v $PROJECT_HOME/digidb:/digidb \
+    -v $PROJECT_HOME/docker-library/tnsnames.ora.guest:/u01/app/oracle/product/11.2.0/xe/network/admin/tnsnames.ora \
+    --link ibdx-compose.local:ibdx.local \
+    -it \
+    --entrypoint=/bin/bash wnameless/oracle-xe-11g \
+    -ic 'cd /digidb && sqlplus ib/ib@ibdx.local/XE'
+}
+
+sql+ibglb() 
+{
+  docker run --rm \
+    --network=docker_default \
+    -e "NLS_LANG=LATVIAN_LATVIA.UTF8" \
+    -v $PROJECT_HOME/digidb:/digidb \
+    -v $PROJECT_HOME/docker-library/tnsnames.ora.guest:/u01/app/oracle/product/11.2.0/xe/network/admin/tnsnames.ora \
+    --link ibdx-compose.local:ibdx.local \
+    -it \
+    --entrypoint=/bin/bash wnameless/oracle-xe-11g \
+    -ic 'cd /digidb && sqlplus ibglb/ibglb@ibdx.local/XE'
+}
+
+sql+ibsys() 
+{
+  docker run --rm \
+    --network=docker_default \
+    -e "NLS_LANG=LATVIAN_LATVIA.UTF8" \
+    -v $PROJECT_HOME/digidb:/digidb \
+    -v $PROJECT_HOME/docker-library/tnsnames.ora.guest:/u01/app/oracle/product/11.2.0/xe/network/admin/tnsnames.ora \
+    --link ibdx-compose.local:ibdx.local \
+    -it \
+    --entrypoint=/bin/bash wnameless/oracle-xe-11g \
+    -ic 'cd /digidb && sqlplus sys/oracle@ibdx.local/XE AS SYSDBA'
+}
+
+sql+dgpdsys()
+{
+   docker run --rm \
+    --network=docker_default \
+    -e "NLS_LANG=LATVIAN_LATVIA.UTF8" \
+    -v $PROJECT_HOME/dgp-db:/dgp-db \
+    -v $PROJECT_HOME/docker-library/tnsnames.ora.guest:/u01/app/oracle/product/11.2.0/xe/network/admin/tnsnames.ora \
+    --link dgpd-db-compose.local:dgpd-db.local \
+    -it \
+    --entrypoint=/bin/bash wnameless/oracle-xe-11g \
+    -ic 'cd /dgp-db && sqlplus sys/oracle@dgpd-db.local/XE AS SYSDBA'
 }
 
 sql+dgpd()
 {
-  sqlplus dgpd/dgpd@dgpd
+   docker run --rm \
+    --network=docker_default \
+    -e "NLS_LANG=LATVIAN_LATVIA.UTF8" \
+    -v $PROJECT_HOME/dgp-db:/dgp-db \
+    -v $PROJECT_HOME/docker-library/tnsnames.ora.guest:/u01/app/oracle/product/11.2.0/xe/network/admin/tnsnames.ora \
+    --link dgpd-db-compose.local:dgpd-db.local \
+    -it \
+    --entrypoint=/bin/bash wnameless/oracle-xe-11g \
+    -ic 'cd /dgp-db && sqlplus dgpd/dgpd@dgpd-db.local/XE'
 }
 
-sql+ibglb()
-{
-  sqlplus ibglb/ibglb@ibdx
-}
-
-sql+ibsys()
-{
-  sqlplus system/oracle@ibdx
-}
