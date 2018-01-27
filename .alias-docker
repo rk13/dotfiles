@@ -70,3 +70,8 @@ d-cp()
 {
   $DOCKER_CMD cp $1 $2
 }
+
+d-swagger-editor()
+{
+  $DOCKER_CMD run -d --rm -p 80:8080 swaggerapi/swagger-editor
+}

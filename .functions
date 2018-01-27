@@ -198,3 +198,8 @@ function o() {
      open "$@";
   fi;
 }
+
+# emulates linux netstat command - e.g. prints out the process info listening on specified port
+function netstat() {
+  lsof -n -i:"$@" | grep LISTEN
+}
