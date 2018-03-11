@@ -3,6 +3,8 @@
 # Aliases for sqlplus 
 #
 
+alias sqlplus='rlwrap ${ORACLE_HOME}/bin/sqlplus'
+
 sql+patch()
 {
   docker run --rm \
