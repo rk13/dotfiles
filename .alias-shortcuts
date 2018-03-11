@@ -31,9 +31,6 @@ alias la='ls -A'
 alias l='ls -CF'
 alias lsd="ls -lF | grep --color=never '^d'"
 
-alias fd='find . -type d -name'
-alias ff='find . -type f -name'
-
 # mac aliases
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'

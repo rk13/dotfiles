@@ -34,12 +34,12 @@ sql+ibglb()
   docker run --rm \
     --network=docker_default \
     -e "NLS_LANG=LATVIAN_LATVIA.UTF8" \
-    -v $PROJECT_HOME/digidb:/digidb \
+    -v $PROJECT_HOME/storm/digi:/digi \
     -v $PROJECT_HOME/docker-library/tnsnames.ora.guest:/u01/app/oracle/product/11.2.0/xe/network/admin/tnsnames.ora \
     --link ibdx-compose.local:ibdx.local \
     -it \
     --entrypoint=/bin/bash wnameless/oracle-xe-11g \
-    -ic 'cd /digidb && sqlplus ibglb/ibglb@ibdx.local/XE'
+    -ic 'cd /digi && sqlplus ibglb/ibglb@ibdx.local/XE'
 }
 
 sql+ibsys() 
