@@ -1,0 +1,18 @@
+
+#
+# Aliases for most often used digital ocean control (doctl)
+#
+
+do-ssh()
+{
+  echo "SSH to Digital Ocean droplet.."
+  doctl compute ssh $1
+}
+
+do-list()
+{
+  echo "List Digital Ocean droplets.."
+  doctl compute droplet list
+}
+
+
