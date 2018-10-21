@@ -34,3 +34,12 @@ alias lsd="ls -lF | grep --color=never '^d'"
 # mac aliases
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+cimo-version()
+{ 
+  site="m.citadele.lv"
+  endpoint="cimo"
+  token=$(curl -s -X POST "https://$site/$endpoint/p/ping?androidNative=1&version=12" | cut -d '"' -f 6)
+  echo $token
+  curl -X POST "https://$site/$endpoint/p/version;jsessionid=$token"
+}
