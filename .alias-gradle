@@ -6,5 +6,9 @@
 # Runs storm cucumber test tagger with "vk"
 alias vk="./stormw @restCompile rest-assured-tests:cucumber -PenvTest=stable -Pplatf=DOCKER -PRA_TAGS=@vk"
 
+# Runs storm cucumber test tagged with "vk" against mdev
+alias vkm="./stormw @restCompile rest-assured-tests:cucumber -PenvTest=stable -Pplatf=DEV -PRA_TAGS=@vk"
+
+
 # Runs citadele android project tests
 alias ad="./gradlew clean :mobile-scan:clean :mobile-hce-app:clean :mobile-common-android:clean testDebugUnitTest :mobile-scan:testDebugUnitTest :mobile-common-android:testDebugUnitTest :mobile-hce-app:testDebugUnitTest"
