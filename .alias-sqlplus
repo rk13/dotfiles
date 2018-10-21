@@ -62,7 +62,7 @@ sql+dgpdsys()
    docker run --rm \
     --network=docker_default \
     -e "NLS_LANG=LATVIAN_LATVIA.UTF8" \
-    -v $PROJECT_HOME/dgp-db:/dgp-db \
+    -v $PROJECT_HOME/dgpd-ng/dgp-db:/dgp-db \
     -v $PROJECT_HOME/docker-library/tnsnames.ora.guest:/u01/app/oracle/product/11.2.0/xe/network/admin/tnsnames.ora \
     --link dgpd-db-compose.local:dgpd-db.local \
     -it \
@@ -75,7 +75,7 @@ sql+dgpd()
    docker run --rm \
     --network=docker_default \
     -e "NLS_LANG=LATVIAN_LATVIA.UTF8" \
-    -v $PROJECT_HOME/dgp-db:/dgp-db \
+    -v $PROJECT_HOME/dgpd-ng/dgp-db:/dgp-db \
     -v $PROJECT_HOME/docker-library/tnsnames.ora.guest:/u01/app/oracle/product/11.2.0/xe/network/admin/tnsnames.ora \
     --link dgpd-db-compose.local:dgpd-db.local \
     -it \
