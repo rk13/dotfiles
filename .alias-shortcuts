@@ -39,7 +39,16 @@ cimo-version()
 { 
   site="m.citadele.lv"
   endpoint="cimo"
-  token=$(curl -s -X POST "https://$site/$endpoint/p/ping?androidNative=1&version=12" | cut -d '"' -f 6)
+  token=$(curl -s -X POST "https://$site/$endpoint/p/ping?androidNative=1&version=19" | cut -d '"' -f 6)
+  echo $token
+  curl -X POST "https://$site/$endpoint/p/version;jsessionid=$token"
+}
+
+cimo-version-pilot()
+{ 
+  site="m.citadele.lv"
+  endpoint="cimo-pilot"
+  token=$(curl -s -X POST "https://$site/$endpoint/p/ping?androidNative=1&version=19" | cut -d '"' -f 6)
   echo $token
   curl -X POST "https://$site/$endpoint/p/version;jsessionid=$token"
 }
