@@ -18,7 +18,7 @@ which you do not commit to this repo and just keep in your `~/`
 * `.vimrc` - vim config
 * `.functions`
 
-#### git, brah
+#### git
 * `.git`
 * `.gitattributes`
 * `.gitconfig`
