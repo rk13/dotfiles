@@ -18,7 +18,13 @@ d-toolbox()
 d-mac()
 {
   echo "switching to docker for mac"
-  unset ${!DOCKER_*} 
+  eval "$(docker-machine env -u)"
+# unset ${!DOCKER_*} 
+}
+
+d-minikube()
+{
+  eval $(minikube docker-env)
 }
 
 d-build()
