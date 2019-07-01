@@ -1,1 +1,1 @@
-/Users/vladkoto/.dotfiles/.exports
+../.exports

@@ -1,1 +1,1 @@
-/Users/vladkoto/.dotfiles/.exports.local.pyro
+../.exports.local.pyro

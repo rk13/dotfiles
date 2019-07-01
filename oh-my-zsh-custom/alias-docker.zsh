@@ -1,1 +1,1 @@
-/Users/vladkoto/.dotfiles/.alias-docker
+../.alias-docker

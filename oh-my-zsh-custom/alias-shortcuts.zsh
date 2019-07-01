@@ -1,1 +1,1 @@
-/Users/vladkoto/.dotfiles/.alias-shortcuts
+../.alias-shortcuts

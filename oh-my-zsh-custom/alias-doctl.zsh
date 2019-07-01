@@ -1,1 +1,1 @@
-/Users/vladkoto/.dotfiles/.alias-doctl
+../.alias-doctl

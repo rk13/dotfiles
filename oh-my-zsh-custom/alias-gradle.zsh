@@ -1,1 +1,1 @@
-/Users/vladkoto/.dotfiles/.alias-gradle
+../.alias-gradle

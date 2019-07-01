@@ -1,1 +1,1 @@
-/Users/vladkoto/.dotfiles/.alias-maven
+../.alias-maven

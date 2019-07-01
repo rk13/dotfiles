@@ -1,1 +1,1 @@
-/Users/vladkoto/.dotfiles/.functions
+../.functions

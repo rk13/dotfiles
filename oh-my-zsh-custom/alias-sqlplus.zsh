@@ -1,1 +1,1 @@
-/Users/vladkoto/.dotfiles/.alias-sqlplus
+../.alias-sqlplus
