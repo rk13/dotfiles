@@ -29,5 +29,5 @@ mvn-install()
 
 mvn-deploy-javadoc()
 {
-  mvn deploy:deploy-file -DgroupId=$1 -DartifactId=$2 -Dversion=$3 -Dfile=$4 -Dpackaging=jar -Dclassifier=javadoc -Durl=file:///Users/vladkoto/.m2/repository
+  mvn deploy:deploy-file -DgroupId=$1 -DartifactId=$2 -Dversion=$3 -Dfile=$4 -Dpackaging=jar -Dclassifier=javadoc -Durl=file:///Users/rk13/.m2/repository
 }
