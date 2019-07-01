@@ -129,7 +129,7 @@ install_dotfiles () {
   info 'installing dotfiles'
 
   local overwrite_all=false backup_all=false skip_all=false
-  for src in $(find "$DOTFILES_ROOT/" -maxdepth 2 -type f -name '.*')
+  for src in $(find "$DOTFILES_ROOT/" -maxdepth 1 -type f -name '.*')
   do
     dst="$HOME/$(basename $src)"
     link_file "$src" "$dst"
