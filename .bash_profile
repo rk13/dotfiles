@@ -52,3 +52,7 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 ### Additional extension Z
 [ -f "/usr/local/etc/profile.d/z.sh" ] && . /usr/local/etc/profile.d/z.sh
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/rk13/.sdkman"
+[[ -s "/Users/rk13/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/vladkoto/.sdkman/bin/sdkman-init.sh"

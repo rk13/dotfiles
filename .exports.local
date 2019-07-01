@@ -1,0 +1,36 @@
+#!/bin/sh
+
+export PYTHON_USER_HOME="~/Library/Python/2.7"
+
+export PATH=$PATH:$JAVA_HOME/bin
+export PATH=$PATH:$PYTHON_USER_HOME/bin
+export PATH=$PATH:/Users/rk13/soft/android-sdk/build-tools/24.0.1/
+export PATH=$PATH:/Users/rk13/soft/bin/
+export PATH=$PATH:/Users/rk13/Library/Python/2.7/bin/
+export PATH=$PATH:/Users/rk13/soft/jadx/bin
+
+# The next line updates PATH for the Google Cloud SDK.
+# source '/Users/rk13/soft/google-cloud-sdk/path.bash.inc'
+
+# The next line enables shell command completion for gcloud.
+# source '/Users/rk13/soft/google-cloud-sdk/completion.bash.inc'
+
+# Storm environment
+# export GRADLE_ENV=development-mac
+# export PROJECT_HOME="/Users/rk13/git/"
+# export PSD2_API_SERVER="api.local"
+
+# Oracle
+export ORACLE_HOME=/Users/rk13/soft/oracle-client/
+export PATH=$ORACLE_HOME/bin:$PATH
+export TNS_ADMIN=$ORACLE_HOME/network/admin
+export DYLD_LIBRARY_PATH=$ORACLE_HOME/lib
+export DYLD_LIBRARY_PATH=$ORACLE_HOME/lib
+
+### Additional extension Z
+[ -f "/usr/local/etc/profile.d/z.sh" ] && . /usr/local/etc/profile.d/z.sh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/rk13/.sdkman"
+[[ -s "/Users/rk13/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/vladkoto/.sdkman/bin/sdkman-init.sh"
+
