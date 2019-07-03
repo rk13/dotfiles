@@ -1,0 +1,54 @@
+[user]
+	name = Vladimirs Kotovs
+	email = vladimirs.kotovs@klarna.com
+
+[color]
+	ui = auto
+
+[credential]
+	helper = cache --timeout=3600
+
+[url "git@github.com:"]
+  insteadOf = gh:
+
+[alias]
+	co = checkout
+	st = status
+	br = branch
+  ci = commit
+  unstage = reset HEAD --
+  lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+  lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+  lg = !"git lg1"
+  tag = tag -a
+
+#[core]
+#	autocrlf = true
+
+[push]
+	default = simple
+[core]
+	excludesfile = /Users/vladimirs.kotovs/.gitignore_global
+	autocrlf = input
+	ignorecase = false
+[diff]
+  tool = intellij
+[difftool "intellij"]
+  cmd = idea diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[merge]
+  tool = intellij
+[mergetool "intellij"]
+  cmd = "/Applications/IntelliJ IDEA 2016.3 EAP.app" merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
+  trustExitCode = true
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[commit]
+	template = /Users/vladimirs.kotovs/.stCommitMsg

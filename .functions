@@ -172,3 +172,21 @@ webmify(){
 function netstat() {
   lsof -n -i:"$@" | grep LISTEN
 }
+function kfk_send(){
+	kafka-console-producer.sh --broker-list ${2:-"localhost:9092"} --topic $1
+}
+
+function kfk_read(){
+	kafka-console-consumer.sh --bootstrap-server ${2:-"localhost:9092"} --topic $1 --from-beginning
+}
+
+function kfk_topic_create() {
+  kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic $1
+}
+
+function kfk_start() {
+  zookeeper-server-start.sh $KAFKA_HOME/config/zookeeper.properties &
+  kafka-server-start.sh $KAFKA_HOME/config/server.properties
+}
+
+
