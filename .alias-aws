@@ -1,0 +1,19 @@
+
+#
+# Aliases for most often used aws
+#
+
+aws-klarna-session-non-prod()
+{
+  eval `aws-login-tool login -r Klarna_ADFS_read-only -a klarna-non-production`
+}
+
+aws-klarna-prompt()
+{
+  if [[ -n $AWS_PROFILE ]] && [[ $AWS_SESSION_EXPIRATION_TIME -gt $(date +%s) ]]; then
+    echo "[$AWS_PROFILE ($(( ($AWS_SESSION_EXPIRATION_TIME - $(date -u +%s)) / 60)) minute(s) remaining)]"
+  elif [[ -n $AWS_PROFILE ]]; then
+    echo "[$AWS_PROFILE (no session token)]"
+  fi
+  #export PROMPT_COMMAND=aws_profile_prompt
+}

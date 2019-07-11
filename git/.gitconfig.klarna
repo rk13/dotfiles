@@ -10,6 +10,8 @@
 
 [url "git@github.com:"]
   insteadOf = gh:
+[url "https://vladimirs.kotovs@stash.int.klarna.net/"]
+  insteadOf = kl:
 
 [alias]
 	co = checkout
