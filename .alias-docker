@@ -79,3 +79,14 @@ d-swagger-editor()
 {
   $DOCKER_CMD run -d --rm -p 80:8080 swaggerapi/swagger-editor
 }
+
+dc-up()
+{
+  docker-compose up --detach --force-recreate
+}
+
+dc-down()
+{
+  docker-compose down
+}
+

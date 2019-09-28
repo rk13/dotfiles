@@ -30,6 +30,8 @@ export PATH=$PATH:$SBT_HOME/bin
 export KAFKA_HOME="$HOME/soft/kafka"
 export PATH=$PATH:$KAFKA_HOME/bin
 
+export PATH=$PATH:$HOME/bin
+
 export EDITOR=vim
 
 [[ -s "$HOME/.exports.local.$(hostname -s)" ]] && source "$HOME/.exports.local.$(hostname -s)"
