@@ -21,7 +21,9 @@ brew "jq"
 brew "jsonschema2pojo"
 brew "kafkacat"
 brew "kubernetes-cli"
+brew "libpq"
 brew "m-cli"
+brew "mas"
 brew "midnight-commander"
 brew "moreutils"
 brew "pyenv"
@@ -37,3 +39,10 @@ brew "wagoodman/dive/dive"
 cask "graphql-playground"
 cask "insomnia"
 cask "spotify"
+mas "1Password 7", id: 1333542190
+mas "Be Focused", id: 973134470
+mas "Foxit Reader", id: 1032155965
+mas "iMovie", id: 408981434
+mas "Monosnap", id: 540348655
+mas "Owly", id: 882812218
+mas "Pages", id: 409201541
