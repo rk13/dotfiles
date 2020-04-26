@@ -3,4 +3,13 @@
 # Aliases for most often used aws
 #
 
+aws-local-dbd()
+{
+  export LOCAL_AWS="--endpoint-url http://localhost:8000"
+}
+
+aws-remote-dbd()
+{
+ export LOCAL_AWS=
+}
 
