@@ -5,10 +5,14 @@
 
 alias sqlplus='rlwrap ${ORACLE_HOME}/bin/sqlplus'
 
-
-psql+mrdb-prod()
+psql+client+local()
 {
-  docker run -it --rm jbergknoff/postgresql-client -h mrdb -d mrdb -U mrdb
+docker run --link local-postgres:local-postgres -it --rm jbergknoff/postgresql-client -h local-postgres -d postgres -U postgres
+}
+
+psql+server+local()
+{
+  docker run --rm -p 5432:5432 --name local-postgres -e POSTGRES_PASSWORD=123 -d postgres
 }
 
 sql+patch()
