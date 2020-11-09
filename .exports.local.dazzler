@@ -6,4 +6,8 @@
 export SDKMAN_DIR="/home/rk13/.sdkman"
 [[ -s "/home/rk13/.sdkman/bin/sdkman-init.sh" ]] && source "/home/rk13/.sdkman/bin/sdkman-init.sh"
 
+# aws
 export AWS_PROFILE=default
+autoload bashcompinit && bashcompinit
+complete -C '/usr/local/bin/aws_completer' aws
+
