@@ -1,4 +1,9 @@
+
+### Additional extension Z
+[ -f "/usr/local/etc/profile.d/z.sh" ] && . /usr/local/etc/profile.d/z.sh
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/rk13/.sdkman"
 [[ -s "/home/rk13/.sdkman/bin/sdkman-init.sh" ]] && source "/home/rk13/.sdkman/bin/sdkman-init.sh"
 
+export AWS_PROFILE=default
