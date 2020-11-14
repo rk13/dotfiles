@@ -34,4 +34,7 @@ export PATH=$PATH:$HOME/bin
 
 export EDITOR=vim
 
+# see https://github.com/ohmyzsh/ohmyzsh/issues/6835
+export ZSH_DISABLE_COMPFIX=true
+
 [[ -s "$HOME/.exports.local.$(hostname -s)" ]] && source "$HOME/.exports.local.$(hostname -s)"
