@@ -16,6 +16,8 @@ alias h="history"
 alias g=git
 alias d=docker
 
+alias hh=hh_client
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
