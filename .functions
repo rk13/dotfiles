@@ -190,4 +190,6 @@ function kfk_start() {
   kafka-server-start.sh $KAFKA_HOME/config/server.properties
 }
 
-
+function my_ip() {
+  dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | sed 's/"//g'
+}
