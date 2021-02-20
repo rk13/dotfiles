@@ -1,6 +1,7 @@
 
 PROMPT="%(?:%{$fg_bold[white]%}%m %{$fg_bold[green]%}➜ :%{$fg_bold[white]%}%m %{$fg_bold[red]%}➜ )"
-PROMPT+='%{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+# PROMPT+='%{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+PROMPT+='%{$fg[cyan]%}%c%{$fg[blue]%}$(_scm_prompt) %{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
