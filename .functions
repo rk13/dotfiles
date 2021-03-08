@@ -173,6 +173,11 @@ webmify(){
 function netstat() {
   lsof -n -i:"$@" | grep LISTEN
 }
+
+function netstat_all() {
+  lsof -nP -i | grep LISTEN
+}
+
 function kfk_send(){
 	kafka-console-producer.sh --broker-list ${2:-"localhost:9092"} --topic $1
 }
