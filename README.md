@@ -1,6 +1,6 @@
 # dotfiles
 
-This repo is mostly for me but you're welcome.
+Dotfiles I use.
 
 ## private config
 Toss it into a file called `.exports.local`
