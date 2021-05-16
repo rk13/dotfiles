@@ -48,7 +48,6 @@ brew "fgeller/tap/kt"
 brew "jesseduffield/lazydocker/lazydocker"
 brew "wagoodman/dive/dive"
 cask "graphql-playground"
-cask "insomnia"
 cask "spotify"
 mas "1Password 7", id: 1333542190
 mas "Be Focused", id: 973134470
