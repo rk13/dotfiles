@@ -167,3 +167,8 @@ function kfk_start() {
 function my_ip() {
   dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | sed 's/"//g'
 }
+
+function my_ip_info() {
+  curl http://ipinfo.io
+}
+
