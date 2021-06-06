@@ -1,6 +1,5 @@
 # dotfiles
 
-## private config
 Toss it into a file called `.exports.local`
 which you do not commit to this repo and just keep in your `~/`
 
