@@ -167,3 +167,11 @@ function kfk_start() {
 function my_ip() {
   dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | sed 's/"//g'
 }
+
+function date_to_unix() {
+  date -j -f "%Y-%m-%d %T" "$1 $2" "+%s"
+}
+
+function date_from_unix() {
+  date -r $1
+}
