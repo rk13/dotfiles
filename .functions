@@ -175,3 +175,8 @@ function date_to_unix() {
 function date_from_unix() {
   date -r $1
 }
+
+function my_ip_info() {
+  curl http://ipinfo.io
+}
+
