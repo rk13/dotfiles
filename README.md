@@ -15,7 +15,7 @@ which you do not commit to this repo and just keep in your `~/`
 * `.exports` - shell variables variables
 * `.export.local.%hostname%` - local shell variables
 * `.vimrc` - vim config
-* `.functions`
+* `.functions` - various usefull functions
 
 #### git
 * `.git`
