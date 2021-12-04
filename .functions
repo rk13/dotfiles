@@ -138,14 +138,17 @@ webmify(){
 	ffmpeg -i $1 -vcodec libvpx -acodec libvorbis -isync -copyts -aq 80 -threads 3 -qmax 30 -y $2 $1.webm
 }
 
-# emulates linux netstat command - e.g. prints out the process info listening on specified port
-function netstat() {
-  lsof -n -i:"$@" | grep LISTEN
-}
+unamestr=`uname`
+if [[ "$unamestr" == 'Darwin' ]]; then 
+  # emulates linux netstat command - e.g. prints out the process info listening on specified port
+  function netstat() {
+    lsof -n -i:"$@" | grep LISTEN
+  }
 
-function netstat_all() {
-  lsof -nP -i | grep LISTEN
-}
+  function netstat_all() {
+    lsof -nP -i | grep LISTEN
+  }
+fi
 
 function kfk_send(){
 	kafka-console-producer.sh --broker-list ${2:-"localhost:9092"} --topic $1
