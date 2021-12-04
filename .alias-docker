@@ -3,10 +3,10 @@
 # Aliases for most often used docker commands
 #
 
-export DOCKER_CMD='docker'
+export DOCKER_CMD=(docker)
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
-   export DOCKER_CMD='sudo docker'
+  export DOCKER_CMD=(sudo docker)
 fi
 
 d-toolbox()
