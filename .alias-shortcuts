@@ -13,10 +13,15 @@ alias -- -="cd -"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias h="history"
-alias g=git
-alias d=docker
+alias g="git"
 
-alias hh=hh_client
+alias d="docker"
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
+  alias d="sudo docker"
+fi
+
+alias hh="hh_client"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
