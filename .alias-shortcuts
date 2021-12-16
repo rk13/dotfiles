@@ -18,7 +18,7 @@ alias g="git"
 alias d="docker"
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
-  alias d="sudo docker"
+  alias d="docker"
 fi
 
 alias hh="hh_client"

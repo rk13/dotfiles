@@ -6,7 +6,7 @@
 export DOCKER_CMD=(docker)
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
-  export DOCKER_CMD=(sudo docker)
+  export DOCKER_CMD=(docker)
 fi
 
 d-toolbox()
