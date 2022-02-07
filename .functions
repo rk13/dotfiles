@@ -193,3 +193,11 @@ function kfk_start() {
 function my_ip() {
   dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | sed 's/"//g'
 }
+
+function kcat_logan_consume() {
+  docker run -it --rm edenhill/kcat:1.7.1 -b 10.8.0.5:19092 -t $1 -C -K: 
+}
+
+function kcat_logan_produce() {
+  docker run -it --rm edenhill/kcat:1.7.1 -b 10.8.0.5:19092 -t $1 -P -K:
+}
