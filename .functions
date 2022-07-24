@@ -4,7 +4,6 @@ function mdcd() {
   cd "$@"
 }
 
-
 # find shorthand
 function f() {
     find . -name "$1"
@@ -16,7 +15,7 @@ function hrep() {
 }
 
 # cd into whatever is the forefront Finder window.
-cdf() {  # short for cdfinder
+cdf() {
   cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
 }
 
