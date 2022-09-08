@@ -9,19 +9,6 @@ if [[ "$unamestr" == 'Linux' ]]; then
   export DOCKER_CMD=(docker)
 fi
 
-d-toolbox()
-{
-  echo "switching to docker toolbox"
-  eval "$(docker-machine env default)"
-}
-
-d-mac()
-{
-  echo "switching to docker for mac"
-  eval "$(docker-machine env -u)"
-# unset ${!DOCKER_*} 
-}
-
 d-minikube()
 {
   eval $(minikube docker-env)
@@ -73,11 +60,6 @@ d-log()
 d-cp()
 {
   $DOCKER_CMD cp $1 $2
-}
-
-d-swagger-editor()
-{
-  $DOCKER_CMD run -d --rm -p 80:8080 swaggerapi/swagger-editor
 }
 
 dc-up()
