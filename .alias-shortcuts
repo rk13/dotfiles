@@ -27,7 +27,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # ls aliases
-alias ll='ls -lF'
+alias ll='ls -laF'
 alias la='ls -aF'
 alias lsd="ls -lF | grep --color=never '^d'"
 
