@@ -190,3 +190,7 @@ function my_ip_info() {
   curl http://ipinfo.io
 }
 
+function jk {
+  kill -9 %$1
+}
+
