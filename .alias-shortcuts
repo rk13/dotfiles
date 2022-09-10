@@ -13,8 +13,6 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias h="history"
 alias g="git"
-alias m='less'
-alias l='less'
 alias d="docker"
 
 alias hh="hh_client"
